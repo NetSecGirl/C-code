@@ -27,6 +27,7 @@ int main()
     struct node* head = NULL;
     struct node* second = NULL;
     struct node* third = NULL;
+    
     int total_elem = 0;
 
     /* Allocate memory to the linked list structure */
