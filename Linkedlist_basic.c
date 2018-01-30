@@ -6,6 +6,7 @@ struct node {
     struct node* next;
 };
 
+/* Compute length of the linked list */
 int length_of_ll (struct node* head)
 {
     struct node* current = head;
@@ -22,11 +23,13 @@ int length_of_ll (struct node* head)
 
 int main()
 {
+    /* initialize the structures */
     struct node* head = NULL;
     struct node* second = NULL;
     struct node* third = NULL;
     int total_elem = 0;
 
+    /* Allocate memory to the linked list structure */
     head = malloc (sizeof(struct node));
     second = malloc (sizeof(struct node));
     third = malloc (sizeof(struct node));
@@ -40,6 +43,7 @@ int main()
     third->val = 28;
     third->next = NULL;
 
+    /* Compute length of the linked list */
     total_elem = length_of_ll(head);
 
     printf("total elem = %d\n", total_elem);
