@@ -9,12 +9,17 @@ struct node {
 
 void deleteNode(struct node* node) {
     struct node* temp;
-    temp = node;
-    node->val = temp->next->val;
-    if(temp->next->next == NULL)
+    
+    temp = node->next;
+    /* copy next node val */
+    node->val = temp->val;
+    /* point next of next node to current next */
+    if(temp->next == NULL)
         node->next = NULL;
     else
-        node->next = temp->next->next;
+        node->next = temp->next;
+    /* free next */
+    free(temp);
     
 }
 struct node* Build()
